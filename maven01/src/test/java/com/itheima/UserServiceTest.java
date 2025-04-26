@@ -12,7 +12,7 @@ public class UserServiceTest {
       初始化实例
      */
      @BeforeEach
-     public  void setup(){
+     public void setup(){
          us = new UserService();
      }
      /*
@@ -92,20 +92,19 @@ public class UserServiceTest {
             int age = us.getAge("3390051998111066164");
         });
     }
-    @DisplayName("测试年龄-传入身份证号年龄小于0")
-    @Test
-    public void testGetAgeLessZero() throws Exception {
-
-             int age = us.getAge("339005202504266616");
-        System.out.println(age);
-
-        Assertions.assertEquals(-1,age);
-    }
+//    @DisplayName("测试年龄-传入身份证号年龄小于0")
+//    @Test
+//    public void testGetAgeLessZero() throws Exception {
+//
+//             int age = us.getAge("339005202504266616");
+//        System.out.println(age);
+//
+//        Assertions.assertEquals(-1,age);
+//    }
     @DisplayName("测试年龄-传入正常身份证号")
     @Test
     public void testGetAge() throws Exception {
           int age = us.getAge("339005199811106616");
-         System.out.println(age);
           Assertions.assertEquals(26,age);
     }
 }

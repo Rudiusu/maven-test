@@ -1,5 +1,6 @@
 package com.itheima;
 
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +11,8 @@ import java.time.format.DateTimeFormatter;
      * 给定一个身份证号, 计算出该用户的年龄
      * @param idCard 身份证号
      */
+
+
     public Integer getAge(String idCard) throws Exception{
         if (idCard == null || idCard.length() != 18) {
             throw new IllegalArgumentException("无效的身份证号码");
